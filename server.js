@@ -48,7 +48,7 @@ app.listen(config.server.port);
 // Print Status to Console
 // =============================================================================
 
-console.log('Magic happens on  port' + config.server.port);
+console.log('Magic happens on  port ' + config.server.port);
 
 process.on('uncaughtException', function (err) {
   console.log(err);
