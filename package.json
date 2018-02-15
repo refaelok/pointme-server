@@ -1,0 +1,22 @@
+{
+  "name": "pointme-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "startserver:prod": "cross-env NODE_ENV=prod nodemon --watch ./src ./server.js",
+    "startserver:dev": "cross-env NODE_ENV=dev nodemon --watch ./src ./server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "~1.0.1",
+    "cross-env": "^4.0.0",
+    "express": "^4.8.0",
+    "mongoose": "~4.6.8",
+    "morgan": "^1.9.0",
+    "nodemon": "latest",
+    "ramda": "^0.25.0"
+  }
+}
