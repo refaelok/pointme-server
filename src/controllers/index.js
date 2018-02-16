@@ -4,11 +4,11 @@
 
 const baseAPI = '/api';
 
-const todo = {
-    uri: `${baseAPI}/todo`,
-    api: require('./todo')
+const user = {
+    uri: `${baseAPI}/users`,
+    controller: require('./Users')
 };
 
 module.exports = function(app) {
-    app.use(todo.uri, todo.api);
+    app.use(user.uri, user.controller);
 };

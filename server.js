@@ -2,10 +2,17 @@ const express     = require('express');
 const mongoose    = require('mongoose');
 const morgan     = require('morgan');
 const bodyParser  = require('body-parser');
+const firebase = require('firebase');
 const config      = require('./src/config');
 const routes      = require('./src/controllers');
 const httpHeaders = require('./src/middleware/http-headers');
 const app         = express();
+
+
+// Initialize third  part applications
+// =============================================================================
+
+firebase.initializeApp(config.firebase.config);
 
 
 
