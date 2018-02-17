@@ -41,17 +41,4 @@ UsersSchema.methods.toJSON = function() {
     return R.pick(['email'], userObject);
 };
 
-UsersSchema.methods.generateAuthToken = function() {
-    const JWT_SECRET = process.env.JWT_SECRET || config.JWT_SECRET;
-    const payload = {
-        access: config.accessTypes.AUTH,
-        _id: this._id.toHexString()
-    };
-    const token = jwt.sign(payload, JWT_SECRET).toString();
-
-    this.tokens.push({access: payload.access, token});
-
-    return token;
-};
-
 module.exports = mongoose.model('Users', UsersSchema);
